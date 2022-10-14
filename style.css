@@ -1,0 +1,488 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  font-family: "Jua", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+ul {
+  padding: 0px;
+}
+/*screen*/
+.screen {
+  width: 400px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  box-shadow: 0px 0px 100px #f7f0ff;
+  position: relative;
+  -ms-overflow-style: none;
+  overflow-y: auto;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*status-bar*/
+.status-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  position: sticky;
+  background-color: #12151a;
+  top: 0px;
+  z-index: 3;
+}
+
+.status-bar div {
+  width: 33%;
+  margin-top: 30px;
+  box-sizing: border-box;
+  color: whitesmoke;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.status-bar div:first-child {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.status-bar div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.status-bar div:last-child {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+/* component */
+.section-title {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 15px 0px;
+}
+
+/*first screen*/
+
+/*아티스트 정보*/
+
+.artist-info {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.artist-info > div:first-child {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(#12151a, white);
+}
+
+.artist-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.artist-photo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px gray;
+  position: absolute;
+  top: 100px;
+}
+
+.artist-info-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 15px;
+}
+
+.artist-info-info > div:first-child {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.artist-info-info > div:last-child {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 14px;
+}
+
+.artist-info-tool {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 15px;
+}
+
+.artist-info-tool i {
+  padding: 0px 5px;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: #bababa;
+}
+
+.artist-info-tool span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #bababa;
+}
+
+/*아티스트 소개*/
+.introduce-artist {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+  box-sizing: border-box;
+}
+
+.introduce-artist div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.introduce-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+  color: #262626;
+}
+
+.introduce-text span {
+  margin-bottom: 10px;
+}
+
+.introduce-text p:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  line-height: 1.2em;
+  height: 3.6em;
+}
+
+/*대표곡*/
+.famous-song {
+  width: 100%;
+  padding: 0px 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.famous-song ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-list-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.music-list-column {
+  display: flex;
+  align-items: center;
+}
+
+.music-list-column img {
+  width: 4em;
+  height: 4em;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 15px;
+}
+
+.music-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-description span:first-child {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.music-description span:last-child {
+  font-size: 12px;
+  color: gray;
+}
+
+.music-list-tool {
+  display: flex;
+}
+
+.music-list-tool i {
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.music-list-tool i:last-child {
+  color: #bababa;
+}
+
+/*인기 앨범*/
+.popular-album {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+  box-sizing: border-box;
+}
+
+.popular-album ul {
+  display: flex;
+  overflow-x: auto;
+}
+
+.popular-album li {
+  width: 9em;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.album-cover {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.album-cover img {
+  width: 9em;
+  height: 9em;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.album-cover i {
+  font-size: 1.6em;
+  color: white;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  text-shadow: 1px 1px 5px #bababa;
+}
+
+.album-descriotion {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-descriotion div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.album-descriotion div i {
+  padding: 0px 5px;
+  box-sizing: border-box;
+  color: #bababa;
+}
+
+.album-descriotion div span {
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.album-descriotion > span {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+/*재생 바*/
+.play-bar {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  margin: 15px;
+  padding: 10px 0px;
+  background-color: #262626;
+  position: sticky;
+  top: 90%;
+  bottom: 15px;
+}
+
+.play-bar-description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.play-bar-description span:first-child {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.play-bar-description span:last-child {
+  font-size: 14px;
+  color: gray;
+}
+
+.play-bar-tool {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: whitesmoke;
+}
+
+.play-bar-tool i:nth-child(2) {
+  font-size: 30px;
+}
+
+/*second screen*/
+.right .status-bar {
+  background-color: inherit;
+}
+
+.right .status-bar i {
+  color: #262626;
+}
+
+/*now-playing-cover*/
+.now-palying {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.now-playing-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.now-playing-cover img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px #7d6885;
+}
+
+.now-playing-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.now-playing-description span:first-child {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.now-playing-description span:last-child {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.now-playing-range {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.now-playing-range div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  font-size: 12px;
+}
+
+.now-playing-range input {
+  height: 4px;
+  -webkit-appearance: none;
+  background: #262626;
+  margin: 10px 0px;
+}
+
+.now-playing-range input:focus {
+  outline: none;
+}
+
+.now-playing-range input::-webkit-slider-thumb {
+  width: 10px;
+  height: 20px;
+  -webkit-appearance: none;
+  background: whitesmoke;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.now-playing-range input::-ms-track {
+  background: gray;
+  border-color: transparent;
+  color: transparent;
+}
+
+.now-playing-tool {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 20px;
+  color: #bababa;
+}
+
+.now-playing-tool i:nth-child(2n) {
+  font-size: 30px;
+  color: #262626;
+}
+
+.now-playing-tool i:nth-child(3) {
+  font-size: 50px;
+  color: #262626;
+}
